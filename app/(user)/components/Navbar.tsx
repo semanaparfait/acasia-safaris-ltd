@@ -67,7 +67,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className={`text-xl font-black leading-none tracking-tighter ${isScrolled ? 'text-white' : 'text-white'}`}>
-                ACASIA<span className="text-emerald-500">SAFARIS</span>
+                ACASIA<span className="text-emerald-500"> SAFARIS</span>
               </span>
               <span className="text-[10px] uppercase tracking-[3px] text-emerald-400 font-bold">LTD</span>
             </div>
@@ -94,9 +94,9 @@ export default function Navbar() {
             {/* <Search className="text-white cursor-pointer hover:text-emerald-400 transition-colors hidden sm:block" size={20} /> */}
             <Link 
               href="/booking"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-3 rounded-full text-[12px] font-bold uppercase tracking-widest shadow-lg shadow-emerald-900/20 transition-all hover:-translate-y-1 active:scale-95"
+              className="bg-[var(--primary-dark)] hover:bg-[var(--primary-dark)] text-white px-7 py-3 rounded-full text-[12px] font-bold uppercase tracking-widest shadow-lg shadow-emerald-900/20 transition-all hover:-translate-y-1 active:scale-95"
             >
-              Enquire Now
+              Book Now
             </Link>
             
             {/* Mobile Toggle */}
@@ -132,7 +132,7 @@ export default function Navbar() {
           ))}
           <Link 
             href="/booking" 
-            className="mt-4 bg-emerald-600 text-white px-12 py-5 rounded-full font-black text-xl"
+            className="mt-4 bg-[var(--primary-dark)] text-white px-12 py-5 rounded-full font-black text-xl"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             BOOK NOW
