@@ -2,6 +2,7 @@ import Footer from "@/app/(user)/components/Footer";
 import Navbar from "@/app/(user)/components/Navbar";
 import Hero from "@/app/(user)/components/Hero";
 import Tours from "@/app/(user)/components/Tours";
+import AboutUs from "@/app/(user)/components/AboutUs";
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Tours />
+      <AboutUs />
       <Footer />
     </>
   );
