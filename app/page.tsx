@@ -5,6 +5,7 @@ import Tours from "@/app/(user)/components/Tours";
 import AboutUs from "@/app/(user)/components/AboutUs";
 import WhyChooseUs from "@/app/(user)/components/WhyChooseUs";
 import Testimonials from "@/app/(user)/components/Testimonials";
+import Gallery from "@/app/(user)/components/Gallery";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Tours />
       <AboutUs />
       <WhyChooseUs />
+      <Gallery />
       <Testimonials />
       <Footer />
     </>
