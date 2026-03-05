@@ -31,7 +31,7 @@ export default function Navbar() {
   ];
 
   return (
-    <>
+    <header className={`${pathname === '/booking' ? 'hidden' : ""}`}>
  
       <div className={`fixed top-0 w-full z-60 hidden lg:block transition-transform duration-300 ${
         isScrolled ? '-translate-y-full ' : 'translate-y-0'
@@ -154,6 +154,6 @@ export default function Navbar() {
           </Link>
         </div>
       </header>
-    </>
+    </header>
   );
 }
