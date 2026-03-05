@@ -33,7 +33,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
-          {/* Left Column - Contact Information */}
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ export default function Contact() {
               </h3>
 
               <div className="flex flex-col gap-10">
-                {/* Office */}
+
                 <div className="flex items-start gap-6 group">
                   <div className="w-10 h-10 border border-[#0a120b]/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#0a120b] group-hover:text-white transition-all duration-500">
                     <MapPin size={16} />
@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Phone */}
+
                 <div className="flex items-start gap-6 group">
                   <div className="w-10 h-10 border border-[#0a120b]/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#0a120b] group-hover:text-white transition-all duration-500">
                     <Phone size={16} />
@@ -74,7 +74,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Email */}
+
                 <div className="flex items-start gap-6 group">
                   <div className="w-10 h-10 border border-[#0a120b]/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#0a120b] group-hover:text-white transition-all duration-500">
                     <Mail size={16} />
@@ -97,7 +97,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right Column - The Form */}
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export default function Contact() {
             <form className="flex flex-col gap-8">
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* First Name */}
+
                 <div className="flex flex-col gap-2">
                   <label htmlFor="firstName" className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-[#0a120b]/60">
                     First Name
@@ -121,7 +121,7 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Last Name */}
+
                 <div className="flex flex-col gap-2">
                   <label htmlFor="lastName" className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-[#0a120b]/60">
                     Last Name
@@ -135,7 +135,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Email */}
+
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-[#0a120b]/60">
                   Email Address
@@ -148,7 +148,7 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Interest */}
+
               <div className="flex flex-col gap-2">
                 <label htmlFor="interest" className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-[#0a120b]/60">
                   Primary Interest
@@ -166,7 +166,7 @@ export default function Contact() {
                 </select>
               </div>
 
-              {/* Message */}
+
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-[#0a120b]/60">
                   Your Message
@@ -190,6 +190,21 @@ export default function Contact() {
             </form>
           </motion.div>
 
+        </div>
+      </div>
+            <div className="md:px-6 px-3 mt-8 mb-5 max-w-7xl mx-auto">
+        <div className="relative rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl h-[450px]">
+
+            <iframe
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.4730576220622!2d30.098852474015416!3d-1.9646178980175963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca9b295f0ced9%3A0x3cb73a2a3f5aa7c5!2sSOLVIT%20AFRICA%20Training%20Center!5e0!3m2!1sen!2srw!4v1771490072483!5m2!1sen!2srw"
+            width="100%"
+            height="100%"
+            allowFullScreen
+            style={{ border: 0, filter: 'grayscale(0.5) contrast(1.2)' }}
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade">
+
+                </iframe>
         </div>
       </div>
     </div>
