@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import {
   MapPin,
   Clock,
@@ -14,6 +15,7 @@ import {
   Camera,
   ChevronLeft,
   ChevronRight,
+
 } from "lucide-react";
 import { Great_Vibes } from "next/font/google";
 
@@ -279,7 +281,8 @@ export default function TourPage() {
                     className="group bg-white flex flex-col sm:flex-row border border-[#0a120b]/5 shadow-sm hover:shadow-md transition-shadow"
                   >
 
-                    <div className="w-full sm:w-2/5 aspect-[4/3] sm:aspect-auto relative overflow-hidden bg-gray-100">
+                    <Link href={`/tour/${tour.id}`}
+                      className="w-full sm:w-2/5 aspect-[4/3] sm:aspect-auto relative overflow-hidden bg-gray-100">
                       <img
                         src={tour.image}
                         alt={tour.title}
@@ -291,7 +294,7 @@ export default function TourPage() {
                           {tour.rating}
                         </span>
                       </div>
-                    </div>
+                    </Link>
 
 
                     <div className="p-8 sm:w-3/5 flex flex-col justify-between">
