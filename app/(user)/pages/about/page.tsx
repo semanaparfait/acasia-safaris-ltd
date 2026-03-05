@@ -1,9 +1,8 @@
-import React from 'react'
 
-function page() {
+
+ export default function AboutUs() {
   return (
     <div>page</div>
   )
 }
 
-export default page

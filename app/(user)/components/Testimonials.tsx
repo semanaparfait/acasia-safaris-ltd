@@ -22,10 +22,10 @@ export default function Testimonials() {
   return (
     <section className="py-24 bg-[#f9f9fb] text-[#0a120b] px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Editorial Header */}
         <div className="text-center mb-16">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-emerald-700 font-bold text-[10px] uppercase tracking-[0.4em] block mb-4"
@@ -33,7 +33,7 @@ export default function Testimonials() {
             Guest Perspectives
           </motion.span>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight uppercase">
-            Stories from the <br /> 
+            Stories from the <br />
             <span className="italic font-serif font-light text-emerald-800/70 normal-case">heart of the wild.</span>
           </h2>
         </div>
@@ -41,7 +41,7 @@ export default function Testimonials() {
         {/* Testimonial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {reviews.map((review, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -73,9 +73,9 @@ export default function Testimonials() {
 
         {/* Trust Logos */}
         <div className="mt-20 flex flex-wrap justify-center items-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-           <span className="text-xs font-black uppercase tracking-[0.3em]">TripAdvisor</span>
-           <span className="text-xs font-black uppercase tracking-[0.3em]">SafariBookings</span>
-           <span className="text-xs font-black uppercase tracking-[0.3em]">National Geographic</span>
+          <span className="text-xs font-black uppercase tracking-[0.3em]">TripAdvisor</span>
+          <span className="text-xs font-black uppercase tracking-[0.3em]">SafariBookings</span>
+          <span className="text-xs font-black uppercase tracking-[0.3em]">National Geographic</span>
         </div>
       </div>
     </section>

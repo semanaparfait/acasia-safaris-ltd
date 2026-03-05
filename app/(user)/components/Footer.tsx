@@ -83,7 +83,7 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Your email address" 
-                className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-emerald-500 transition-colors"
+                className="w-full bg-white/5 border border-white/10 rounded-lg py-4 px-6 focus:outline-none focus:border-emerald-500 transition-colors"
               />
               <button className="absolute right-2 top-2 bg-emerald-600 p-2.5 rounded-full hover:bg-emerald-500 transition-colors">
                 <ArrowRight size={20} />

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ShoppingCart } from 'lucide-react';
 
 const galleryPages = [
@@ -21,7 +21,7 @@ export default function PerfectGridGallery() {
   const [page, setPage] = useState(0);
 
   // Stagger variants for the "Perfect Grid" entrance
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -29,7 +29,7 @@ export default function PerfectGridGallery() {
     }
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, scale: 0.9, y: 20 },
     show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
@@ -37,7 +37,7 @@ export default function PerfectGridGallery() {
   return (
     <section className="py-24 bg-white min-h-screen flex items-center justify-center font-serif">
       <div className="bg-white p-12   w-full relative ">
-        
+
         {/* Gallery Header */}
         <div className="flex justify-between items-start mb-10">
           <div>
@@ -51,7 +51,7 @@ export default function PerfectGridGallery() {
         </div>
 
         {/* The Animated Grid */}
-        <motion.div 
+        <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -124,8 +124,8 @@ export default function PerfectGridGallery() {
           <div className="flex items-center gap-4">
             <span className="text-3xl font-light">1 <span className="text-gray-200 text-xl italic">/ 3</span></span>
             <div className="flex gap-2">
-               <button className="text-emerald-800 p-2 hover:bg-emerald-50 rounded-full transition-all"><ChevronLeft size={20}/></button>
-               <button className="text-emerald-800 p-2 hover:bg-emerald-50 rounded-full transition-all"><ChevronRight size={20}/></button>
+              <button className="text-emerald-800 p-2 hover:bg-emerald-50 rounded-full transition-all"><ChevronLeft size={20} /></button>
+              <button className="text-emerald-800 p-2 hover:bg-emerald-50 rounded-full transition-all"><ChevronRight size={20} /></button>
             </div>
           </div>
           <div className="text-4xl text-gray-100 font-serif italic">"</div>

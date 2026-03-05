@@ -1,7 +1,13 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Clock, ArrowUpRight, Star, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Great_Vibes } from 'next/font/google';
+
+const greatVibes = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 const safariHighlights = [
   {
@@ -32,91 +38,77 @@ const safariHighlights = [
 
 export default function Tours() {
   return (
-    <section className="py-32 bg-[#0a120b] px-6">
+    <section className="py-24 bg-white px-4 md:px-8 font-serif">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-xl">
-            <motion.span 
-              initial={{ opacity: 0, y: 20 }}
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 border-b border-[#0a120b]/10 pb-12">
+          <div className="max-w-2xl">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-emerald-500 uppercase tracking-[0.4em] text-[10px] font-bold mb-4 block"
+              viewport={{ once: true }}
+              className={`text-(--primary-dark) text-4xl md:text-5xl tracking-wide mb-2 block ${greatVibes.className}`}
             >
-              Curated Expeditions
+              Plan your trip
             </motion.span>
-            <h2 className="text-5xl md:text-6xl font-black text-white leading-tight tracking-tighter">
-              CHOOSE YOUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">PRIVATE SAFARI.</span>
+            <h2 className="text-5xl  text-[#0a120b] ">
+              Let us plan you a <br /> perfect Holiday
             </h2>
           </div>
-          <button className="group flex items-center gap-3 text-white/60 hover:text-emerald-500 transition-all font-bold tracking-widest text-xs uppercase border-b border-white/10 pb-2">
-            View All Tours <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform" />
+          <button className="group flex items-center gap-3 text-[#0a120b] hover:text-[#0a120b]/60 transition-colors font-sans tracking-[0.2em] text-[10px] font-bold uppercase pb-2">
+            Explore All <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform duration-300" />
           </button>
         </div>
 
         {/* Tours Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {safariHighlights.map((safari, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.15, duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="group relative bg-[#151d16] rounded-[13px] overflow-hidden border border-white/5 hover:border-emerald-500/30 transition-all duration-500 shadow-2xl"
+              className="group cursor-pointer flex flex-col"
             >
               {/* Image Container */}
-              <div className="relative h-[300px] w-full overflow-hidden">
-                <img 
-                  src={safari.image} 
+              <div className="relative aspect-[6/6] w-full overflow-hidden mb-8 bg-gray-100">
+                <img
+                  src={safari.image}
                   alt={safari.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[20%] group-hover:grayscale-0" 
+                  className="w-full h-full rounded-lg object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-15 group-hover:grayscale-0"
                 />
-                
-                {/* Floating Badge */}
-                <div className="absolute top-6 left-6 z-20">
-                  <span className="bg-emerald-600/90 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full">
+
+                {/* Minimalist Badge */}
+                <div className="absolute top-5 left-5 z-20">
+                  <span className="bg-white/95 backdrop-blur-sm text-[#0a120b] text-[9px] font-sans font-bold uppercase tracking-[0.2em] px-4 py-2">
                     {safari.tag}
                   </span>
                 </div>
-
-                {/* Glassmorphism Bottom Overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a120b] to-transparent z-10" />
               </div>
 
               {/* Content Container */}
-              <div className="p-8 relative -mt-20 z-20 bg-gradient-to-b from-transparent via-[#151d16] to-[#151d16]">
+              <div className="flex flex-col flex-grow px-2 md:px-0">
                 <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors">
-                      {safari.title}
-                    </h3>
-                    <div className="flex items-center gap-2 text-gray-400">
-                      <MapPin size={12} className="text-emerald-500" />
-                      <span className="text-xs font-medium">{safari.location}</span>
-                    </div>
-                  </div>
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-emerald-600 group-hover:border-emerald-600 transition-all duration-500">
-                    <ArrowUpRight className="text-white" size={20} />
-                  </div>
+                  <h3 className="text-3xl text-[#0a120b] group-hover:text-[#0a120b]/70 transition-colors">
+                    {safari.title}
+                  </h3>
+                  <span className="text-xl text-[#0a120b] italic">{safari.price}</span>
                 </div>
 
-                <div className="flex items-center gap-6 mb-8">
-                  <div className="flex flex-col">
-                    <span className="text-[10px] uppercase text-gray-500 font-bold tracking-widest">Duration</span>
-                    <span className="text-sm font-bold text-white flex items-center gap-2">
-                      <Clock size={14} className="text-emerald-500" /> {safari.duration}
-                    </span>
-                  </div>
-                  <div className="w-[1px] h-8 bg-white/10" />
-                  <div className="flex flex-col">
-                    <span className="text-[10px] uppercase text-gray-500 font-bold tracking-widest">Pricing</span>
-                    <span className="text-sm font-bold text-emerald-500">From {safari.price}</span>
-                  </div>
+                <div className="flex items-center gap-3 text-[#0a120b]/50 font-sans text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
+                  <span>{safari.location}</span>
+                  <span className="w-1 h-1 rounded-full bg-[#0a120b]/20" />
+                  <span>{safari.duration}</span>
                 </div>
 
-                <button className="w-full bg-white/5 hover:bg-emerald-600 text-white py-4 rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 border border-white/10 hover:border-emerald-600 group-hover:shadow-[0_10px_20px_rgba(16,185,129,0.2)]">
-                  Reserve Experience
-                </button>
+                <div className="mt-auto">
+                  <div className="w-full h-[1px] bg-[#0a120b]/10 group-hover:bg-[#0a120b]/30 transition-colors mb-6" />
+                  <div className="flex items-center justify-between text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-[#0a120b]">
+                    <span>Discover Details</span>
+                    <ArrowRight size={14} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" />
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
