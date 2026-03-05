@@ -100,7 +100,7 @@ export default function Navbar() {
               href="/booking"
               className="bg-(--primary-dark) hover:bg-(--primary-dark) text-white px-7 py-3 rounded-full text-[12px] font-bold uppercase tracking-widest shadow-lg shadow-emerald-900/20 transition-all hover:-translate-y-1 active:scale-95"
             >
-              Book Now
+              Plan Trip
             </Link>
             
             {/* Mobile Toggle */}
