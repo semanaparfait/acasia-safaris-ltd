@@ -50,7 +50,7 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <header 
-        className={`${!isHomePage ? 'bg-amber-500 ' : ''} fixed left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        className={`fixed left-0 w-full z-50 transition-all duration-500 ease-in-out ${
           isScrolled 
             ? 'top-0 bg-[#0a120b]/90 backdrop-blur-xl py-3 shadow-2xl' 
             : 'top-0 lg:top-10 bg-transparent py-6'
