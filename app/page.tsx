@@ -11,14 +11,14 @@ import Gallery from "@/app/(user)/components/Gallery";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Tours />
       <AboutUs />
       <WhyChooseUs />
       <Gallery />
       <Testimonials />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

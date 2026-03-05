@@ -23,7 +23,7 @@ export default function Navbar() {
   const isHomePage = pathname === '/';
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Destinations', href: '/destinations' },
+    { name: 'Destinations', href: '/destination' },
     { name: 'Tour', href: '/tour' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
